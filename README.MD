@@ -1,7 +1,7 @@
-[![Dependency Status](https://dependencyci.com/github/AlisonVilela/ngx-zendesk-webwidget/badge)](https://dependencyci.com/github/AlisonVilela/ngx-zendesk-webwidget)
-[![Maintainability](https://api.codeclimate.com/v1/badges/75bc5877b3bf6939fe44/maintainability)](https://codeclimate.com/github/AlisonVilela/ngx-zendesk-webwidget/maintainability)
-[![Build Status](https://travis-ci.org/AlisonVilela/ngx-zendesk-webwidget.svg?branch=master)](https://travis-ci.org/AlisonVilela/ngx-zendesk-webwidget)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/AlisonVilela/ngx-zendesk-webwidget/issues)
+[![Dependency Status](https://dependencyci.com/github/niteshpurohit/ng7-zendesk-webwidget/badge)](https://dependencyci.com/github/niteshpurohit/ng7-zendesk-webwidget)
+[![Maintainability](https://api.codeclimate.com/v1/badges/75bc5877b3bf6939fe44/maintainability)](https://codeclimate.com/github/niteshpurohit/ng7-zendesk-webwidget/maintainability)
+[![Build Status](https://travis-ci.org/niteshpurohit/ng7-zendesk-webwidget.svg?branch=master)](https://travis-ci.org/niteshpurohit/ng7-zendesk-webwidget)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/niteshpurohit/ng7-zendesk-webwidget/issues)
 [![Join the chat at https://gitter.im/ngx-zendesk-webwidget/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dwyl/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # ngx-zendesk-webwidget
@@ -31,39 +31,31 @@ import { AppComponent } from './app.component';
 import { ngxZendeskWebwidgetModule } from 'ngx-zendesk-webwidget';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    ngxZendeskWebwidgetModule.forRoot()
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, ngxZendeskWebwidgetModule.forRoot()],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 ##### SharedModule
 
 ```ts
 @NgModule({
-    exports: [
-        CommonModule,
-        ngxZendeskWebwidgetModule
-    ]
+  exports: [CommonModule, ngxZendeskWebwidgetModule]
 })
-export class SharedModule { }
+export class SharedModule {}
 ```
 
 ##### Configuration
 
 ```ts
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {ngxZendeskWebwidgetModule, ngxZendeskWebwidgetConfig} from 'ngx-zendesk-webwidget';
+import { ngxZendeskWebwidgetModule, ngxZendeskWebwidgetConfig } from 'ngx-zendesk-webwidget';
 
-import {AppComponent} from './app';
+import { AppComponent } from './app';
 
 export class ZendeskConfig extends ngxZendeskWebwidgetConfig {
   accountUrl = 'yourdomain.zendesk.com';
@@ -74,14 +66,10 @@ export class ZendeskConfig extends ngxZendeskWebwidgetConfig {
 }
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        ngxZendeskWebwidgetModule.forRoot(ZendeskConfig)
-    ],
-    bootstrap: [AppComponent]
+  imports: [BrowserModule, HttpClientModule, ngxZendeskWebwidgetModule.forRoot(ZendeskConfig)],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 #### 2. Init the `ngxZendeskWebwidgetService` for your application:
@@ -94,9 +82,7 @@ import { ngxZendeskWebwidgetService } from 'ngx-zendesk-webwidget';
   templateUrl: './app.html'
 })
 export class app {
-
-  constructor(private _ngxZendeskWebwidgetService: ngxZendeskWebwidgetService) {
-  }
+  constructor(private _ngxZendeskWebwidgetService: ngxZendeskWebwidgetService) {}
 }
 ```
 
@@ -116,6 +102,7 @@ export class app {
   }
 }
 ```
+
 ## API
 
 ### ngxZendeskWebwidgetService
@@ -139,7 +126,7 @@ For more info, see: [ZendeskAPI](https://developer.zendesk.com/embeddables/docs/
 
 ## Issues
 
-Please report bugs and issues [here](https://github.com/AlisonVilela/ngx-zendesk-webwidget/issues).
+Please report bugs and issues [here](https://github.com/niteshpurohit/ng7-zendesk-webwidget/issues).
 
 ## License
 
