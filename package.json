@@ -1,5 +1,5 @@
 {
-  "name": "ngx-zendesk-webwidget-6",
+  "name": "ng7-zendesk-webwidget",
   "version": "0.1.8",
   "main": "./dist/ngx-zendesk-webwidget.js",
   "scripts": {
